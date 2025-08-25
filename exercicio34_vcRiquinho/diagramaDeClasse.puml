@@ -1,0 +1,54 @@
+@startuml vcRiquinho
+
+class Cliente {
+# nome: String
+# email: String
+# contas: List<Conta>
+# tipo: enum {PF, PJ}
++ adicionarConta(Conta conta)
+}
+
+
+abstract class Conta {
+# saldo: Double
+# investimentos: List<Produto>
++ depositar(double valor)
++ sacar(double valor)
++ consultarSaldo(): Double
++ adicionarInvestimento(Produto p)
++ calcularRendimento(int dias, Cliente cliente): double
++ calcularTaxaServico(double rendimento, Cliente cliente): double
+}
+
+class ContaCorrente extends Conta {
+
+}
+
+class ContaCDI extends Conta {
+- rendimentoDiario: Double  //1/30 do CDI
+- taxaDeServicoFixa: Double // 0.0007 de ganho de conta(sem produto)
+}
+
+class ContaInvestimento extends Conta {
+- taxaDeServico: Double
++ definirTaxaDeServico(Cliente cliente) //0.1 pf 0.15 pj
+}
+
+abstract class Produto {
+# nome: String
+# descricao: String
+}
+
+class RendaFixa extends Produto {
+- rendimentoMensalFixo: Double
+- periodoDeCarencia: Integer
+}
+
+class RendaVariavel extends Produto {
+- rendimentoMensalEsperado: Double //historico
+}
+
+Cliente "1" o-- "1.." Conta : possui
+Conta "*" o-- "*" Produto : pode investir em
+
+@enduml

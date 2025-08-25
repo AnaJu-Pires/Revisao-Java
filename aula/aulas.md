@@ -8,5 +8,9 @@
 
     O conteúdo da Aula 01 e os exercícios podem ser encontrados em: https://giovanidisperati.github.io/GRUAPIM/Aula01.html
 
+## Aula 2
+
+    O conteúdo da Aula 02 e os exercícios podem ser encontrados em: https://giovanidisperati.github.io/GRUAPIM/Aula02.html
+
 
 
