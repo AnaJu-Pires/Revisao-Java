@@ -13,4 +13,10 @@
     O conteúdo da Aula 02 e os exercícios podem ser encontrados em: https://giovanidisperati.github.io/GRUAPIM/Aula02.html
 
 
+## Aula 3
 
+    O conteúdo da Aula 03 e os exercícios podem ser encontrados em: https://giovanidisperati.github.io/GRUAPIM/Aula03.html
+
+    - Canal YTB citado aleatoriamente: Akitando
+    
+    
